@@ -517,7 +517,7 @@ div.olControlTextButtonPanel.vertical .olButton:last-child {
     transition: opacity 0.2s linear;
 }
 
-/* Turn on GPU support where available */
+/* Turn on GPU support where available 
 .olTileImage {
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
@@ -532,6 +532,22 @@ div.olControlTextButtonPanel.vertical .olButton:last-child {
     -moz-perspective: 1000;
     -ms-perspective: 1000;
     perspective: 1000;
+}*/
+
+img.olTileImage {
+    -webkit-transform: inherit;
+    -moz-transform: inherit;
+    -o-transform: inherit;
+    -ms-transform: inherit;
+    transform: inherit;
+    -webkit-backface-visibility: inherit;
+    -moz-backface-visibility: inherit;
+    -ms-backface-visibility: inherit;
+    backface-visibility: inherit;
+    -webkit-perspective: inherit;
+    -moz-perspective: inherit;
+    -ms-perspective: inherit;
+    perspective: inherit;
 }
 
 /* when replacing tiles, do not show tile and backbuffer at the same time */
@@ -542,4 +558,16 @@ div.olControlTextButtonPanel.vertical .olButton:last-child {
 /* override any max-width image settings (e.g. bootstrap.css) */
 img.olTileImage {
     max-width: none;
+}
+
+/*
+ *  Layer Fade Animation for single-tile only ( .olLayerDiv.olLayerGridSingleTile > img.olTileImage ),
+ *  .olLayerDiv.olLayerGridSingleTile is set on containing div,
+ *  olTileImage is set on img tag
+ */
+.olLayerDiv.olLayerGridSingleTile > img.olTileImage {
+    -webkit-transition: opacity 0.07s linear;
+    -moz-transition: opacity 0.07s linear;
+    -o-transition: opacity 0.07s linear;
+    transition: opacity 0.07s linear;
 }
