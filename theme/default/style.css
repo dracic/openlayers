@@ -566,8 +566,8 @@ img.olTileImage {
  *  olTileImage is set on img tag
  */
 .olLayerDiv.olLayerGridSingleTile > img.olTileImage {
-    -webkit-transition: opacity 0.07s linear;
-    -moz-transition: opacity 0.07s linear;
-    -o-transition: opacity 0.07s linear;
-    transition: opacity 0.07s linear;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
 }
